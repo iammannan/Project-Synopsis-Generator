@@ -328,7 +328,7 @@ ${ctypesImg}
   zip.file('word/document.xml',documentXml);
   zip.file('word/_rels/document.xml.rels',rels);
 
-  return await zip.generateAsync({type:'blob'});
+  return await zip.generateAsync({type:'blob',mimeType:'application/vnd.openxmlformats-officedocument.wordprocessingml.document'});
 }
 
 const statusEl=document.getElementById('status');
